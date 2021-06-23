@@ -1,7 +1,14 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const {LoaderOptionsPlugin} = require('webpack')
 // HtmlWebPackPlugin in order to get your React app and webpack to work together,
+
+const {LoaderOptionsPlugin} = require('webpack')
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+// mini-css-extract-plugin creates CSS files apart and link them in the HTML file. CSS file load at the same time and there is no FOUC.
+// Instead, loaders like style-loader and css-loader pre-process the stylesheets and embed them into the output JavaScript bundle, instead of the HTML file, causing FOUC.
+
 const path = require('path');
+const devMode = process.env.NODE_ENV !== 'production';
+
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html", 
@@ -20,7 +27,7 @@ module.exports = {
     filename: "[name].js"
   },
   devtool: 'source-map',
-  plugins: [htmlPlugin, loaderOptionPlugin],
+  plugins: [htmlPlugin, loaderOptionPlugin, new miniCssExtractPlugin()],
   devServer: {
     port: 3000,
     watchContentBase: true
@@ -36,7 +43,11 @@ module.exports = {
       },
       {
         test: /\.s(c)ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [devMode ? 'style-loader' : miniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        // I cannot use style-loader and miniCssExtractPlugin loader in the same time, otherwise I get the error:
+        // ReferenceError: document is not defined at insertStyleElement 
+        // (https://github.com/webpack-contrib/style-loader/issues/439#issuecomment-566946315)
+        // Do not use style laoder and mini-css-extract-plugin loader together: https://www.npmjs.com/package/mini-css-extract-plugin
       },
     ]
   }
