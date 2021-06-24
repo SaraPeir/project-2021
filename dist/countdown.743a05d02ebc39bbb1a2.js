@@ -11,8 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _shared_Headline_Headline__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/Headline/Headline */ "./src/shared/Headline/Headline.js");
 
 
@@ -32,7 +31,7 @@ var nextYearDate = new Date("".concat(nextYear, "-01-01"));
 var dateDifference = getDateDifference(nextYearDate, todayDate);
 
 function Countdown() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_shared_Headline_Headline__WEBPACK_IMPORTED_MODULE_1__.default, null, "Count down to ".concat(nextYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "".concat(dateDifference, " days")));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shared_Headline_Headline__WEBPACK_IMPORTED_MODULE_1__.default, null, "Count down to ".concat(nextYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "".concat(dateDifference, " days")));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Countdown);
@@ -40,4 +39,4 @@ function Countdown() {
 /***/ })
 
 }]);
-//# sourceMappingURL=countdown.js.map
+//# sourceMappingURL=countdown.743a05d02ebc39bbb1a2.js.map

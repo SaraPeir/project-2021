@@ -72,7 +72,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @loadable/component */ "./node_modules/@loadable/component/dist/loadable.esm.js");
- // Countdown component is loaded by webpack only if user can see it. It's not included in main bundle any more
+ // Countdown component is loaded by webpack only if user can see it. 
+// It's not included in main bundle any more
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_loadable_component__WEBPACK_IMPORTED_MODULE_0__.default)(function () {
   return __webpack_require__.e(/*! import() | countdown */ "countdown").then(__webpack_require__.bind(__webpack_require__, /*! ./Countdown */ "./src/components/Countdown/Countdown.js"));
@@ -230,4 +231,4 @@ module.exports = ReactDOM;
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=main.9aa46b4b39ef0fcd1cae.js.map

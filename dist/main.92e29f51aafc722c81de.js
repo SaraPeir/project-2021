@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function CurrentTime() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_shared_Headline_Headline__WEBPACK_IMPORTED_MODULE_1__.default, null, "Current date"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, new Date().toDateString()));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_shared_Headline_Headline__WEBPACK_IMPORTED_MODULE_1__.default, null, "Current datttttte"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, new Date().toDateString()));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CurrentTime);
@@ -230,4 +230,4 @@ module.exports = ReactDOM;
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=main.92e29f51aafc722c81de.js.map
