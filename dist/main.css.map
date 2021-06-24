@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://project-2021/./src/App.scss","webpack://project-2021/./src/variables.scss"],"names":[],"mappings":"AAEA;EACI,WCHS;ADEb,C","file":"main.css","sourcesContent":["@import './variables.scss';\r\n\r\nh1 {\r\n    color: $main-color\r\n}","$main-color: teal"],"sourceRoot":""}

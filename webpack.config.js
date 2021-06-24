@@ -6,6 +6,8 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin');
 // mini-css-extract-plugin creates CSS files apart and link them in the HTML file. CSS file load at the same time and there is no FOUC.
 // Instead, loaders like style-loader and css-loader pre-process the stylesheets and embed them into the output JavaScript bundle, instead of the HTML file, causing FOUC.
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 const path = require('path');
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -27,10 +29,22 @@ module.exports = {
     filename: "[name].js"
   },
   devtool: 'source-map',
-  plugins: [htmlPlugin, loaderOptionPlugin, new miniCssExtractPlugin()],
+  watch: true,
+  plugins: [htmlPlugin, loaderOptionPlugin, new miniCssExtractPlugin(), new BundleAnalyzerPlugin()],
   devServer: {
     port: 3000,
     watchContentBase: true
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: "node_vendors", //custom name for vendor which includes everything coming from node modules
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+        }
+      }
+    }
   },
   module: {
     rules: [
